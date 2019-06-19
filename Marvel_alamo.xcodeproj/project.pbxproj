@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -13,6 +13,8 @@
 		2B721CA722B9EE61002F3036 /* Marvel_alamo.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 2B721CA522B9EE61002F3036 /* Marvel_alamo.xcdatamodeld */; };
 		2B721CA922B9EE64002F3036 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2B721CA822B9EE64002F3036 /* Assets.xcassets */; };
 		2B721CAC22B9EE64002F3036 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2B721CAA22B9EE64002F3036 /* LaunchScreen.storyboard */; };
+		2B721CB422B9F47F002F3036 /* MarvelCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B721CB322B9F47F002F3036 /* MarvelCell.swift */; };
+		821D6509B7E6EF5858EBFCF8 /* Pods_Marvel_alamo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9F69802FCDD7F22992C4F1E8 /* Pods_Marvel_alamo.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +26,10 @@
 		2B721CA822B9EE64002F3036 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		2B721CAB22B9EE64002F3036 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		2B721CAD22B9EE64002F3036 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		2B721CB322B9F47F002F3036 /* MarvelCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MarvelCell.swift; sourceTree = "<group>"; };
+		347E0B39163DFA2252401951 /* Pods-Marvel_alamo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Marvel_alamo.release.xcconfig"; path = "Target Support Files/Pods-Marvel_alamo/Pods-Marvel_alamo.release.xcconfig"; sourceTree = "<group>"; };
+		9F69802FCDD7F22992C4F1E8 /* Pods_Marvel_alamo.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Marvel_alamo.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		A9719C583ED9343E7B0190C8 /* Pods-Marvel_alamo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Marvel_alamo.debug.xcconfig"; path = "Target Support Files/Pods-Marvel_alamo/Pods-Marvel_alamo.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,6 +37,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				821D6509B7E6EF5858EBFCF8 /* Pods_Marvel_alamo.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -42,6 +49,8 @@
 			children = (
 				2B721C9D22B9EE61002F3036 /* Marvel_alamo */,
 				2B721C9C22B9EE61002F3036 /* Products */,
+				6FE0B43205822CE2F1024CF2 /* Pods */,
+				C002867E16D0813B4B178801 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -59,12 +68,30 @@
 				2B721C9E22B9EE61002F3036 /* AppDelegate.swift */,
 				2B721CA022B9EE61002F3036 /* ViewController.swift */,
 				2B721CA222B9EE61002F3036 /* Main.storyboard */,
+				2B721CB322B9F47F002F3036 /* MarvelCell.swift */,
 				2B721CA822B9EE64002F3036 /* Assets.xcassets */,
 				2B721CAA22B9EE64002F3036 /* LaunchScreen.storyboard */,
 				2B721CAD22B9EE64002F3036 /* Info.plist */,
 				2B721CA522B9EE61002F3036 /* Marvel_alamo.xcdatamodeld */,
 			);
 			path = Marvel_alamo;
+			sourceTree = "<group>";
+		};
+		6FE0B43205822CE2F1024CF2 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				A9719C583ED9343E7B0190C8 /* Pods-Marvel_alamo.debug.xcconfig */,
+				347E0B39163DFA2252401951 /* Pods-Marvel_alamo.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		C002867E16D0813B4B178801 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				9F69802FCDD7F22992C4F1E8 /* Pods_Marvel_alamo.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -74,9 +101,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 2B721CB022B9EE64002F3036 /* Build configuration list for PBXNativeTarget "Marvel_alamo" */;
 			buildPhases = (
+				9306F4C51765CE3440C10177 /* [CP] Check Pods Manifest.lock */,
 				2B721C9722B9EE61002F3036 /* Sources */,
 				2B721C9822B9EE61002F3036 /* Frameworks */,
 				2B721C9922B9EE61002F3036 /* Resources */,
+				F9D60DAB57623DA7BA3795CB /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -133,6 +162,48 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		9306F4C51765CE3440C10177 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Marvel_alamo-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		F9D60DAB57623DA7BA3795CB /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Marvel_alamo/Pods-Marvel_alamo-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Marvel_alamo/Pods-Marvel_alamo-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Marvel_alamo/Pods-Marvel_alamo-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		2B721C9722B9EE61002F3036 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -140,6 +211,7 @@
 			files = (
 				2B721CA122B9EE61002F3036 /* ViewController.swift in Sources */,
 				2B721C9F22B9EE61002F3036 /* AppDelegate.swift in Sources */,
+				2B721CB422B9F47F002F3036 /* MarvelCell.swift in Sources */,
 				2B721CA722B9EE61002F3036 /* Marvel_alamo.xcdatamodeld in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -284,6 +356,7 @@
 		};
 		2B721CB122B9EE64002F3036 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = A9719C583ED9343E7B0190C8 /* Pods-Marvel_alamo.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -302,6 +375,7 @@
 		};
 		2B721CB222B9EE64002F3036 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 347E0B39163DFA2252401951 /* Pods-Marvel_alamo.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
