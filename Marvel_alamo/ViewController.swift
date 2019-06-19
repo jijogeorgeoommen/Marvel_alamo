@@ -8,15 +8,17 @@
 
 import UIKit
 import Alamofire
+import AlamofireImage
 
 class Hero {
     var name : String?
     var team : String?
-
-    init(name : String?,team :String?) {
+    var img : String?
+    init(name : String?,team :String?, imageurl : String?) {
         
         self.name = name
         self.team = team
+        self.img = imageurl
         
     }
     
@@ -39,13 +41,19 @@ class ViewController: UIViewController,UITableViewDelegate,UITableViewDataSource
         
         cell.nameoutlet.text =  heroes[indexPath.row].name as! String
         cell.teamoutlet.text = heroes[indexPath.row].team as! String
+        Alamofire.request(heroes[indexPath.row].img!).responseImage { (response) in
+            //print(response)
+            if let image = response.result.value{
+                cell.imageoutlet.image = image
+            }
+        }
         
         return cell
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         
-        return 200
+        return 400
     }
     
 
@@ -64,7 +72,7 @@ class ViewController: UIViewController,UITableViewDelegate,UITableViewDataSource
                 for i in 0..<heroesArray.count{
                     
                     self.heroes.append(Hero( name: (heroesArray[i] as AnyObject).value(forKey: "name") as? String,
-                        team: (heroesArray[i] as AnyObject).value(forKey: "team") as? String))
+                                             team: (heroesArray[i] as AnyObject).value(forKey: "team") as? String, imageurl: (heroesArray[i] as AnyObject).value(forKey: "imageurl") as? String))
                     
                  print(self.heroes)
                     

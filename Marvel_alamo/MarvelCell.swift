@@ -10,6 +10,7 @@ import UIKit
 
 class MarvelCell: UITableViewCell {
 
+    @IBOutlet weak var imageoutlet: UIImageView!
     @IBOutlet weak var teamoutlet: UILabel!
     @IBOutlet weak var nameoutlet: UILabel!
     override func awakeFromNib() {
